@@ -50,7 +50,10 @@ app.post("/delete", function(req, res) {
         });
 });
 
-app.listen(3500,function(){
-    console.log("server is running")
+const port = process.env.PORT || 3500;
+
+app.listen(port, function() {
+    console.log("Server started on port " + port);
 });
+
 
